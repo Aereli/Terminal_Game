@@ -157,18 +157,8 @@ switch (lvlThreeOption) {
     console.log("************************************" )
     console.log(`WAIT DO YOU HEAR THAT?!`)
     console.log("************************************" )
-    console.log(`${shuffledcatastrophe}!!!`)
-    // for(let i=0;i<1;i++){
-    //   console.log("*************************************************************************")
-    // }
+
+
+    console.log(`A GIANT ${shuffledcatastrophe}!!!`)
 
     
-  
-    
-
-      // console.log("nvm") 
-      // console.log(typeof fridgeIndex)
-  
-
-// const totalIngredients = [`The Ingredients you've gathered are: ${shuffledFridge}, ${shuffledPantry}`]
-// console.log(totalIngredients)
