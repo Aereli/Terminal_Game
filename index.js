@@ -1,4 +1,7 @@
 const readlineSync = require('readline-sync')
+const delayed = require('delayed')
+
+
 
 console.log("************************************" )
 console.log( "      WELCOME TO THE KITCHEN!" )
@@ -19,8 +22,13 @@ const shuffledDrawer = drawer.sort(() => 0.5 - Math.random()).slice(0,1)
 const shuffledCabinet = cabinet.sort(() => 0.5 - Math.random()).slice(0,3)
 const shuffledcatastrophe = catastrophe.sort(() => 0.5 - Math.random()).slice(0,1)
 
+delayed.delay(() => console.log('beep'), 10000)
+delayed.delay(() => console.log('beep'), 10000)
+delayed.delay(() => console.log('beep'), 10000)
 
-let option = readlineSync.question( "Options: check the fridge, check the pantry, check the spices? " );
+
+
+let option = readlineSync.question( "Options: check the fridge, check the pantry, check the spices? " )
 // let option = readlineSync.question([`check the fridge`, `check the pantry` ,`check the spices? ` ])
 
 switch(option) {
@@ -153,12 +161,14 @@ switch (lvlThreeOption) {
     default: console.log("You started a fire and caused an explosion. You are dead.")
     }
     console.log("************************************" )
-    console.log(`let go to grab our tool that we found in the drawer. *GRABS*${shuffledDrawer}`)
+    console.log(`let go to grab our tool that we found in the drawer. *GRABS* ${shuffledDrawer}`)
     console.log("************************************" )
-    console.log(`WAIT DO YOU HEAR THAT?!`)
+
+    lvlFourOption = readlineSync.keyInYN(`WAIT DO YOU HEAR THAT?!`)
     console.log("************************************" )
 
 
     console.log(`A GIANT ${shuffledcatastrophe}!!!`)
-
+    if (shuffledcatastrophe == 'nothing'){
+    }
     
